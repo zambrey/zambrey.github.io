@@ -1,4 +1,4 @@
-<html ng-app="zambrey-app">
+<html ng-app="zambreyApp">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
@@ -11,7 +11,12 @@
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script type="text/javascript" src="js/controller.js"></script>
 	</head>
-	<body ng-controller="zambrey-ctrl">
+	<body ng-controller="zambreyCtrl">
+		<div class="header" ng-class="{header_sidebar_shown: displaySidebar}">
+			<div class="fa fa-bars sidebar-button" ng-click="displaySidebar=!displaySidebar"></div>
+			<span>{{nameText}}</span>
+		</div>
+
 		<div class="sidebar" ng-class="{sidebar_shown: displaySidebar}">
 			<div class="face">
 				<img ng-src="images/face.jpg">
@@ -28,11 +33,6 @@
 			</div>
 		</div>
 		<div class="content" ng-class="{content_sidebar_shown: displaySidebar}">
-			<div class="header">
-				<div class="fa fa-bars sidebar-button" ng-click="displaySidebar=!displaySidebar"></div>
-				<span>{{nameText}}</span>
-			</div>
-			
 			<div class="section" id="about">
 				<h3>About Me</h3>
 				<d>{{aboutMe}}</p>

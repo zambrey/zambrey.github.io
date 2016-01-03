@@ -33,7 +33,7 @@ p
 	top: -40px;
 	line-height: 40px;
 	color: white;
-	font-size: 18px;
+	font-size: 20px;
 	-webkit-transition: all 0.5s;
 	-moz-trantision: all 0.5s;
 	-o-transtion: all 0.5s;
@@ -44,7 +44,7 @@ p
 .sidebar-button
 {
 	height: 40px;
-	width: 50px;
+	width: 40px;
 	line-height: 40px!important;
 	text-align: center;
 	background-color: #39cccc;
@@ -155,9 +155,6 @@ p
 	margin-top: 10px;
 	border-bottom: solid 5px #aaaaaa;
 	color: #777777;
-	width: 95%;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .project
@@ -215,38 +212,30 @@ p
 
 	.content 
 	{
-		width: 100%;
-		margin-left: 0px;
-		padding-top: 50px;
+		width: 98%;
+		margin-left: 1%;
+		margin-top: 50px;
+	}
+
+	.header_sidebar_shown
+	{
+		margin-left: 250px;
 	}
 
 	.content_sidebar_shown
 	{
-		transform: translate(250px,0px);
-		-webkit-transform: translate(250px,0px);
-		-moz-transform: translate(250px,0px);
-		-ms-transform: translate(250px,0px);
-		-o-transform: translate(250px,0px);
+		margin-left: 260px;
 	}
 
 	.sidebar
 	{
 		width: 250px;
 		left: -250px;
-		transform: translate(0px, 0px);
-		-webkit-transform: translate(0px, 0px);
-		-moz-transform: translate(0px, 0px);
-		-ms-transform: translate(0px, 0px);
-		-o-transform: translate(0px, 0px);
 	}
 
 	.sidebar_shown
 	{
-		transform: translate(250px, 0px);
-		-webkit-transform: translate(250px, 0px);
-		-moz-transform: translate(250px, 0px);
-		-ms-transform: translate(250px, 0px);
-		-o-transform: translate(250px, 0px);
+		left: 0px;
 	}
 
 

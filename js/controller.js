@@ -1,6 +1,6 @@
-var zambreyApp = angular.module('zambrey-app',[]);
+var zambreyApp = angular.module('zambreyApp',[]);
 
-zambreyApp.controller('zambrey-ctrl', function($scope){
+zambreyApp.controller('zambreyCtrl', function($scope){
 	//UI
 	$scope.displaySidebar=false;
 

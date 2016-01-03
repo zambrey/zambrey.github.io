@@ -1,12 +1,8 @@
 body
 {
-	/*background:-webkit-linear-gradient(#C02FFF, #3F1FE8, #2373FF);*/
 	width: auto;
-	/*border: solid 1px;*/
 	margin-left: auto;
 	margin-right: auto;
-	/*border-radius: 5px;*/
-	/*font-family: 'Open Sans', sans-serif;*/
 	font-family: 'Lato', sans-serif;
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -31,9 +27,6 @@ p
 
 .header
 {
-	/*width: 78%;
-	margin-left: 21%;
-	display: none;*/
 	background-color: #000000;
 	position: fixed;
 	height: 40px;
@@ -41,8 +34,11 @@ p
 	line-height: 40px;
 	color: white;
 	font-size: 20px;
-	font-family: Georgia;
-	-webkit-transition: all 0.25s;
+	-webkit-transition: all 0.5s;
+	-moz-trantision: all 0.5s;
+	-o-transtion: all 0.5s;
+	-ms-transtion: all 0.5s;
+	transition: all 0.5s;
 }
 
 .sidebar-button
@@ -51,9 +47,10 @@ p
 	width: 40px;
 	line-height: 40px!important;
 	text-align: center;
-	margin-right: 10px;
 	background-color: #39cccc;
 	display: none;
+	margin-right: 10px;
+	float: left;
 }
 
 #nameText
@@ -74,15 +71,18 @@ p
 
 .sidebar
 {
-	/*float: left;*/
 	position: fixed;
 	left: 0px;
 	top: 0px;
-	bottom: 0px;
 	width: 20%;
-	/*border: solid 1px;*/
+	height: 100%;
+	overflow: auto;
 	background-color: #39cccc;
-	-webkit-transition: all 0.25s;
+	-webkit-transition: all 0.5s;
+	-moz-trantision: all 0.5s;
+	-o-transtion: all 0.5s;
+	-ms-transtion: all 0.5s;
+	transition: all 0.5s;
 }
 
 .social-holder
@@ -112,16 +112,15 @@ p
 	line-height: 50px;	
 }
 
-.sidebar ul li
+.sidebar ul li:not(:last-child)
 {
-	border-bottom: solid 1px #aaaaaa;
+	border-bottom: solid 1px #5dd5d5;
 }
 
 .sidebar ul a
 {
 	text-decoration: none;
 	color: #ffffff!important;
-	/*font-size: 16px;*/
 }
 
 .face
@@ -137,10 +136,13 @@ p
 
 .content
 {
-	/*border: solid 1px;*/
 	width: 78%;
 	margin-left: 21%;
-	-webkit-transition: all 0.25s;
+	-webkit-transition: all 0.5s;
+	-moz-trantision: all 0.5s;
+	-o-transtion: all 0.5s;
+	-ms-transtion: all 0.5s;
+	transition: all 0.5s;
 }
 
 .content li:not(:last-child)
@@ -196,7 +198,6 @@ p
 	width: 100%;
 	text-align: center;
 	clear: both;
-	/*border: solid 1px;*/
 }
 
 
@@ -248,22 +249,4 @@ p
 		float: none;
 		width: 50%;
 	}
-}
-
-#social-media
-{
-	white-space: nowrap;
-	width: 100%;
-	text-align: center;
-	margin-top: 40px;
-}
-
-.social-tile
-{
-	background-size:50px 50px;
-	height: 50px;
-	width: 50px;
-	display: inline-block;
-	cursor: pointer;
-	margin: 5px;
 }

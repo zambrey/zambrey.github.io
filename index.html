@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">	
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<!--script src="https://code.jquery.com/jquery-2.1.4.min.js"></script-->
 		<script type="text/javascript" src="js/controller.js"></script>
 	</head>
 	<body ng-controller="zambrey-ctrl">
@@ -25,77 +25,42 @@
 			<div id="nameSubtext">{{nameSubtext}}</div>
 			<ul>
 				<li ng-repeat="section in sections">
-					<a href="{{section.id}}">{{section.title}}</a>
+					<a href="{{section.link}}">{{section.title}}</a>
 				</li>
 			</ul>
 			<div class="social-holder" >
 				<i ng-repeat="social in socialMedia" class="{{social.class}}" link="{{social.link}}" ng-click="openInNewWindow();"></i>
 			</div>
 		</div>
+
 		<div class="content" ng-class="{content_sidebar_shown: displaySidebar}">
-			<div class="section" id="about">
-				<h3>About Me</h3>
-				<d>{{aboutMe}}</p>
-			</div>
-
-			<div class="section" id="recent">
-				<h3>Recent Projects</h3>
+			<div ng-repeat="sectionItem in sections"  class="section" id="{{sectionItem.id}}">
+				<h3>{{sectionItem.title}}</h3>
 				<ul>
-					<li ng-repeat="recentProject in recentProjects">
+					<li ng-repeat="item in sectionItem.content">
 						<div class="project">
-							<h4>{{recentProject.title}}</h4>
-							<p>{{recentProject.description}}</p>
-							<div><i class="fa fa-link bullet"></i><a href={{recentProject.link}}>{{recentProject.linkText}}</a></div>
-							<div><i class="fa fa-code bullet"></i>{{recentProject.technology}}</div>
+							<h4 ng-show="item.title!==undefined">{{item.title}}</h4>
+							<div>
+								<span ng-show="item.company!==undefined"><i>{{item.company}}</i></span>
+								<span ng-show="item.duration!==undefined"><i>({{item.duration}})</i></span>
+							</div>
+							<div ng-show="item.description!==undefined">{{item.description}}</div>
+							<div ng-show="item.guide!==undefined">
+								<i class="fa fa-user bullet"></i>
+								<span ng-show="item.guide.homepage===undefined">{{item.guide.name}}, {{item.guide.title}}</span>
+								<a ng-show="item.guide.homepage!==undefined" href="{{item.guide.homepage}}" target="_blank">{{item.guide.name}}, {{item.guide.title}}</a>
+							</div>
+							<div ng-show="item.link!==undefined">
+								<i class="fa fa-link bullet"></i>
+								<a href={{item.link.href}} target="_blank">{{item.link.label}}</a>
+							</div>
+							<div ng-show="item.technology!==undefined"><i class="fa fa-code bullet"></i>{{item.technology}}</div>
 						</div>
-					</li>
-				</ul>
-			</div>
-
-			<div class="section" id="internships">
-				<h3>Internships</h3>
-				<ul>
-					<li ng-repeat="internship in internships">
-						<div class="project">
-							<h4>{{internship.title}}</h4>
-							<!--img class="thumbnail" ng-src={{internship.thumbnail}}-->
-							<p>{{internship.description}}</p>
-							<!--span><i class="fa fa-user bullet"></i>{{internship.guide}}, {{internship.guideTitle}}</span-->
-							<div><i class="fa fa-code bullet"></i>{{internship.technology}}</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-			
-			<div class="section" id="grad">
-				<h3>Graduate Projects</h3>
-				<ul>
-					<li ng-repeat="graduateProject in graduateProjects">
-						<div class="project">
-							<h4>{{graduateProject.title}}</h4>
-							<p>{{graduateProject.description}} <a href={{graduateProject.link}}>{{graduateProject.linkText}}</a></p>				
-							<div><i class="fa fa-code bullet"></i>{{graduateProject.technology}}</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-
-			<div class="section" id="undergrad">
-				<h3>Undergraduate Projects</h3>
-				<ul>
-					<li ng-repeat="undergradProject in undergradProjects">
-						<div class="project">
-							<h4>{{undergradProject.title}}</h4>
-							<!--img class="thumbnail" ng-src={{undergradProject.thumbnail}}-->
-							<span><i class="fa fa-user bullet"></i>{{undergradProject.guide}}, {{undergradProject.guideTitle}}</span>
-							<p>{{undergradProject.description}}</p>
-							<a href={{undergradProject.link}}>{{undergradProject.linkText}}</a>
-						</div>
-						
 					</li>
 				</ul>
 			</div>
 		</div>
+
 		<div class="header" ng-class="{header_sidebar_shown: displaySidebar}">
 			<div class="fa fa-bars sidebar-button" ng-click="displaySidebar=!displaySidebar"></div>
 			<span>{{nameText}}</span>

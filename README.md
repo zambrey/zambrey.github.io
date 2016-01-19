@@ -2,9 +2,11 @@ Personal Webpage
 =================
 This also acts as a playground for my personal experiments.
 
-Credits
+![preview](https://raw.githubusercontent.com/zambrey/zambrey.github.io/master/images/amiresponsive.png)
 
-Design: http://html5up.net/read-only, http://clrs.cc/
+**Credits**
+
+Design: http://html5up.net/read-only, http://clrs.cc/, http://ami.responsivedesign.is/
 
 Frameworks: https://angularjs.org/
 

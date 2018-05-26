@@ -17,19 +17,28 @@ zambreyApp.controller('zambrey-ctrl', function($scope){
 
 	$scope.aboutMe=[
 		{
-			"description":"The name is Ameya(pronounced 'uh-meh-yuh'). I currently work as Software Developer with JD Edwards at Oracle. Before Oracle I have been a student at Georgia Tech in Atlanta and at BITS Pilani in India. I also worked as Intern at Epic Systems in Madison and Intel India in Bangalore."
+			"description":"The name is Ameya(pronounced 'uh-meh-yuh'). I currently work as a Software Developer with Excel team at Microsoft. Before joining Microsoft I worked at Oracle for a few years. I graduated from Georgia Tech and am a proud BITSian. I also worked as Intern at Epic Systems in Madison and Intel India in Bangalore."
 		}
 	];
 
 	$scope.recentProjects=[
 		{
-			"title":"Einthusan Monitor",
-			"description":"A solution to monitor a movie website for latest movies and also to search in existing movies using website's REST services. Published on chrome webstore with 2500+ users. Code available on Github (zambrey).",
+			"title":"Complex data in Excel",
+			"description":"Worked on a project to create an interface(cards) for newly supported entity values in Excel on all endpoints (Win32, UWP, Android, iOS and Web).",
 			"link":{
-				"label":"Chrome Webstore",
-				"href":"https://chrome.google.com/webstore/detail/einthusan-monitor/khhfpiaglmihaifnfocggdmifdeigkhg",
+				"label":"TechCrunch",
+				"href":"https://techcrunch.com/2018/03/29/excel-is-getting-smarter/",
 			},
-			"technology":"Javascript, HTML/CSS"
+			"technology":"C++, Java, TypeScript"
+		},
+		{
+			"title":"Einthusan Monitor",
+			"description":"A solution to monitor a movie website for latest movies and also to search in existing movies using website's REST services. It was published on chrome webstore with 2500+ users. Code available on Github (zambrey).",
+			"link":{
+				"label":"Code@Github",
+				"href":"https://github.com/zambrey/Einthusan-Monitor",
+			},
+			"technology":"JavaScript, HTML/CSS"
 		},
 		{
 			"title":"zambrey.github.io",
@@ -47,7 +56,7 @@ zambreyApp.controller('zambrey-ctrl', function($scope){
 				"label":"JD Edwards EnterpriseOne for iPad",
 				"href":"https://itunes.apple.com/us/app/jd-edwards-enterpriseone-for/id624165519",
 			},
-			"technology":"Java, Javascript(HTML/CSS), Objective-C"
+			"technology":"Java, JavaScript(HTML/CSS), Objective-C"
 		},
 		{
 			"title":"Third party apps support for JD Edwards",
@@ -56,7 +65,7 @@ zambreyApp.controller('zambrey-ctrl', function($scope){
 				"label":"Public Documentation",
 				"href":"https://docs.oracle.com/cd/E24902_01/doc.91/e61893/toc.htm",
 			},
-			"technology":"Java, Javascript(HTML/CSS)"
+			"technology":"Java, JavaScript(HTML/CSS)"
 		}
 	];
 
@@ -130,7 +139,7 @@ zambreyApp.controller('zambrey-ctrl', function($scope){
 				"label":"Code@GitHub",
 				"href":"https://github.com/zambrey/SalaRead"
 			},
-			"technology":"Javascript(HTML/CSS), Google Charts, Google Fusion Tables"
+			"technology":"JavaScript(HTML/CSS), Google Charts, Google Fusion Tables"
 		},
 		{
 			"title":"GTLive",

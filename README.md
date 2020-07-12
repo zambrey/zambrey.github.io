@@ -1,6 +1,5 @@
 Personal Webpage
 =================
-This also acts as a playground for my personal experiments.
 
 ![preview](https://raw.githubusercontent.com/zambrey/zambrey.github.io/master/images/amiresponsive.png)
 
